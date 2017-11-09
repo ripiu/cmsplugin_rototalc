@@ -29,8 +29,9 @@ class CarouselPluginPublisher(CMSPluginBase):
                 'fields': (
                     ('show_arrows', 'dots', 'autoplay'),
                     ('autoplay_speed', 'speed'),
-                    ('slides_to_show', 'center_mode'),
-                    ('focus_on_select', 'infinite', 'variable_width'),
+                    ('slides_to_show', 'initial_slide'),
+                    ('center_mode', 'focus_on_select'),
+                    ('infinite', 'variable_width'),
                 )
             }
         )
@@ -51,6 +52,7 @@ class CarouselPluginPublisher(CMSPluginBase):
             'speed': instance.speed,
             'vertical': False,  # instance.vertical,
             'slidesToShow': instance.slides_to_show,
+            'initialSlide': instance.initial_slide,
             'focusOnSelect': instance.focus_on_select,
             'variableWidth': instance.variable_width,
             'cssEase': 'ease',

@@ -46,6 +46,12 @@ class CarouselPlugin(CMSPlugin):
         help_text=_('Number of slides to show at a time.')
     )
 
+    initial_slide = models.SmallIntegerField(
+        _('initial slide'),
+        default=0,
+        help_text=_('Slide to start on.')
+    )
+
     center_mode = models.BooleanField(
         _('center mode'),
         default=True,
