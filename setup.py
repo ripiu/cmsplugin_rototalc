@@ -27,11 +27,10 @@ setup(
     ],
     # TODO: check requirements
     install_requires=[
-        "Django >= 1.8",
-
-        "django-cms >= 3.1",
-        "django-sekizai >= 0.4.2",
-        "django-appconf",
+        'Django >= 1.8',
+        'django-cms >= 3.1',
+        'django-sekizai >= 0.4.2',
+        'django-appconf',
     ],
     python_requires='>=3.3',
     include_package_data=True,

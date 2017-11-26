@@ -1,7 +1,7 @@
-from django.utils.translation import ugettext_lazy as _
-
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
+
+from django.utils.translation import ugettext_lazy as _
 
 from .models import SlidePlugin, CarouselPlugin
 
@@ -14,7 +14,7 @@ def js_boolean(prop):
 class CarouselPluginPublisher(CMSPluginBase):
     model = CarouselPlugin
     name = _('Carousel')
-    module = "Ri+"
+    module = 'Ri+'
     render_template = 'ripiu/cmsplugin_rototalc/carousel.html'
     allow_children = True
     child_classes = ['SlidePluginPublisher']
@@ -61,7 +61,7 @@ class CarouselPluginPublisher(CMSPluginBase):
         context.update({
             'instance': instance,
             'placeholder': placeholder,
-            'cid': "rototalc-carousel-%s" % instance.name,
+            'cid': 'rototalc-carousel-%s' % instance.name,
             'conf': json.dumps(slick_conf),
         })
         return context
@@ -71,7 +71,7 @@ class CarouselPluginPublisher(CMSPluginBase):
 class SlidePluginPublisher(CMSPluginBase):
     model = SlidePlugin
     name = _('Slide')
-    module = "Ri+"
+    module = 'Ri+'
     render_template = 'ripiu/cmsplugin_rototalc/slide.html'
     allow_children = True
     parent_classes = ['CarouselPluginPublisher']
