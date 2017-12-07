@@ -1,10 +1,11 @@
 from cms.models import CMSPlugin
+from ripiu.cmsplugin_articles.models import HeadedPluginModel
 
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 
-class CarouselPlugin(CMSPlugin):
+class CarouselPlugin(HeadedPluginModel):
     """A carousel"""
 
     # VERTICAL = True

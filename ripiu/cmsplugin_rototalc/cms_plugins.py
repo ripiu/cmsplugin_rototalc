@@ -22,6 +22,8 @@ class CarouselPluginPublisher(CMSPluginBase):
         ('', {
             'fields': (
                 'name',
+                ('title', 'subtitle'),
+                'heading_level',
                 ('height', 'slide_margin'),
             )
         }), (
@@ -61,7 +63,6 @@ class CarouselPluginPublisher(CMSPluginBase):
         context.update({
             'instance': instance,
             'placeholder': placeholder,
-            'cid': 'rototalc-carousel-%s' % instance.name,
             'conf': json.dumps(slick_conf),
         })
         return context
