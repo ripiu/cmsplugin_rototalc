@@ -31,6 +31,7 @@ setup(
         'django-cms >= 3.1',
         'django-sekizai >= 0.4.2',
         'django-appconf',
+        'ripiu.cmsplugin_articles>=0.2.0,<0.3.0'
     ],
     python_requires='>=3.3',
     include_package_data=True,
