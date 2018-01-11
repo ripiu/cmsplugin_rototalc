@@ -4,7 +4,7 @@
   {% for plugin in instance.child_plugin_instances %}
     {% render_plugin plugin %}
   {% endfor %}
-  {% if instance.caption_text %}
+  {% if instance.show_caption and instance.caption_text %}
     <figcaption>
       {{ instance.caption_text }}
     </figcaption>
