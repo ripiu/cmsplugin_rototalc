@@ -3,7 +3,8 @@
   opacity: 0.2;
 }
 
-.slick-slide > img {
+.slick-slide > img,
+.slick-slide > picture > img {
   width: auto;
   height: 100%;
 }
