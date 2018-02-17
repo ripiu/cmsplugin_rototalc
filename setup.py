@@ -5,7 +5,7 @@ from ripiu.cmsplugin_rototalc import __version__
 setup(
     name='ripiu.cmsplugin_rototalc',
     version=__version__,
-    url='https://github.com/ripiu/ripiu.cmsplugin_rototalc',
+    url='https://github.com/ripiu/cmsplugin_rototalc',
     license='BSD-new',
     description='A plugin for Django-CMS to display galleries, '
                 'based on Slick carousel',
