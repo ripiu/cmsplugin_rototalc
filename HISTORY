@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+0.3.1 (2018-02-22)
+------------------
+* Fix: forgot a migration
+* Fix: forgot to remove the header fields from the admin
+
 0.3.0 (2018-02-22)
 ------------------
 * ripiu.cmsplugin_rototalc no longer depends on ripiu.cmsplugin_articles

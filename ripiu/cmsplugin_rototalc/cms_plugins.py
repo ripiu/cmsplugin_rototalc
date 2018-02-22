@@ -19,24 +19,15 @@ class CarouselPluginPublisher(CMSPluginBase):
     allow_children = True
     child_classes = ['SlidePluginPublisher']
     fieldsets = (
-        ('', {
+        (_('Slick configuration'), {
             'fields': (
-                'name',
-                ('title', 'subtitle'),
-                'heading_level',
-                ('height', 'slide_margin'),
+                ('show_arrows', 'dots', 'autoplay'),
+                ('autoplay_speed', 'speed'),
+                ('slides_to_show', 'initial_slide'),
+                ('center_mode', 'focus_on_select'),
+                ('infinite', 'variable_width'),
             )
-        }), (
-            _('Slick configuration'), {
-                'fields': (
-                    ('show_arrows', 'dots', 'autoplay'),
-                    ('autoplay_speed', 'speed'),
-                    ('slides_to_show', 'initial_slide'),
-                    ('center_mode', 'focus_on_select'),
-                    ('infinite', 'variable_width'),
-                )
-            }
-        )
+        }),
     )
 
     def render(self, context, instance, placeholder):
