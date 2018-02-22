@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+0.3.0 (2018-02-22)
+------------------
+* ripiu.cmsplugin_rototalc no longer depends on ripiu.cmsplugin_articles
+
 0.2.2 (2018-01-11)
 ------------------
 
