@@ -9,7 +9,7 @@ setup(
     license='BSD-new',
     description='A plugin for Django-CMS to display galleries, '
                 'based on Slick carousel',
-    long_description=open('README.rst').read(),
+    long_description=open('readme.rst').read(),
     author='matteo vezzola',
     author_email='matteo@studioripiu.it',
     # find_packages doesn't like implicit namespace packages:
