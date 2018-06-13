@@ -1,0 +1,3 @@
+$(function() {
+    $('.ripiu.rototalc').slick();
+});

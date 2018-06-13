@@ -6,10 +6,6 @@ from django.utils.translation import ugettext_lazy as _
 from .models import SlidePlugin, CarouselPlugin
 
 
-def js_boolean(prop):
-    return 'true' if prop else 'false'
-
-
 @plugin_pool.register_plugin
 class CarouselPluginPublisher(CMSPluginBase):
     model = CarouselPlugin
@@ -19,14 +15,18 @@ class CarouselPluginPublisher(CMSPluginBase):
     allow_children = True
     child_classes = ['SlidePluginPublisher']
     fieldsets = (
-        (_('Slick configuration'), {
+        (None, {
+            'fields': (
+                ('height', 'slide_margin'),
+            ),
+        }), (_('Slick configuration'), {
             'fields': (
                 ('show_arrows', 'dots', 'autoplay'),
                 ('autoplay_speed', 'speed'),
                 ('slides_to_show', 'initial_slide'),
                 ('center_mode', 'focus_on_select'),
                 ('infinite', 'variable_width'),
-            )
+            ),
         }),
     )
 
