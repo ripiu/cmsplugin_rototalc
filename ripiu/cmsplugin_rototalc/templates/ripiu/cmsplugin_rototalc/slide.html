@@ -1,4 +1,4 @@
-{% load cms_tags menu_tags staticfiles sekizai_tags thumbnail %}
+{% load cms_tags menu_tags static sekizai_tags thumbnail %}
 <figure style="height: {{ slider_height }}; margin: 0 {{ horizontal_margin }};">
   {% for plugin in instance.child_plugin_instances %}
     {% render_plugin plugin %}
